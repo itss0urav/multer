@@ -14,7 +14,7 @@ export default function App() {
         setUserData(res.data);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [userData]);
 
   const handleUpload = () => {
     const formData = new FormData();
@@ -32,6 +32,7 @@ export default function App() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <div className="p-6 m-4 bg-white rounded shadow-md transform hover:scale-105 transition-transform duration-200 ease-in-out">
+    <div className="text-center text-2xl font-bold m-4">Made By Souarv</div>
         <input
           onChange={(e) => setName(e.target.value)}
           className="w-full p-2 m-1 rounded-md border border-gray-300"
